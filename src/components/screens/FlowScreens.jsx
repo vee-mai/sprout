@@ -250,7 +250,7 @@ export const ONBOARD_STEPS = [
   {
     eyebrow: 'Step 2: Background',
     question: 'Are you currently a…',
-    body: 'Tell us where you are in your journey — we'll tailor the mentor recommendations.',
+    body: "Tell us where you are in your journey — we'll tailor the mentor recommendations.",
     options: [
       { title: 'College student',  desc: 'Enrolled in a university or college pursuing an undergraduate or associate degree.', il: IL.college },
       { title: 'Graduate student', desc: "Enrolled in graduate school pursuing a master's or doctoral degree.",               il: IL.grad },
