@@ -7,6 +7,36 @@ export const C = {
   white: '#fff', gray800: '#2C2E3D', gray500: '#8F8F8F',
 }
 
+// Typography scale
+// H1 28 · H2 22 · H3 18 · CTA 16 · Body 14 · BodySm 13 · Caption 12 · Label/Micro 11
+export const T = {
+  screenTitle: { fontFamily: 'Urbanist', fontWeight: 800, fontSize: 28, letterSpacing: -.5, color: '#FFF9E6' },  // H1
+  sectionTitle: { fontFamily: 'Urbanist', fontWeight: 700, fontSize: 22, letterSpacing: -.3, color: '#FFF9E6' }, // H2
+  cardTitle:   { fontFamily: 'Urbanist', fontWeight: 700, fontSize: 18, letterSpacing: -.2, color: '#FFF9E6' },  // H3
+  cta:         { fontFamily: 'Urbanist', fontWeight: 700, fontSize: 16, letterSpacing: -.2 },                    // Primary CTA
+  body:        { fontFamily: 'Urbanist', fontSize: 14, color: 'rgba(255,249,230,.8)' },                          // Body
+  bodyMuted:   { fontFamily: 'Urbanist', fontSize: 14, color: 'rgba(255,249,230,.5)' },                          // Body muted
+  bodySm:      { fontFamily: 'Urbanist', fontSize: 13, color: 'rgba(255,249,230,.7)' },                          // Body small
+  caption:     { fontFamily: 'Urbanist', fontSize: 12, color: 'rgba(255,249,230,.5)' },                          // Caption
+  label:       { fontFamily: 'Urbanist', fontWeight: 700, fontSize: 11, letterSpacing: '.08em', textTransform: 'uppercase', color: 'rgba(255,249,230,.45)' }, // Tag/Badge
+  micro:       { fontFamily: 'Urbanist', fontSize: 11, color: 'rgba(255,249,230,.4)' },                          // Micro
+}
+
+// Spacing scale (8-point grid)
+export const SP = {
+  xs: 4, sm: 8, md: 12, lg: 16, xl: 20, xxl: 24, xxxl: 32,
+  screenH: 24,   // horizontal screen padding
+  screenTop: 60, // status bar clearance
+  navBottom: 100, // bottom nav clearance
+}
+
+// Surface / card styles
+export const surface = (strength = 'base') => ({
+  base:    { background: 'rgba(255,249,230,.05)', border: '1px solid rgba(255,249,230,.08)' },
+  strong:  { background: 'rgba(255,249,230,.08)', border: '1px solid rgba(255,249,230,.1)' },
+  accent:  { background: 'rgba(185,255,111,.08)', border: '1px solid rgba(185,255,111,.2)' },
+}[strength])
+
 export function Btn({ children, variant = 'primary', onClick, style = {}, size = 'lg' }) {
   const base = {
     border: 'none', cursor: 'pointer', userSelect: 'none',
